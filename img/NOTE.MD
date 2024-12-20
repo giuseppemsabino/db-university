@@ -1,0 +1,1 @@
+Nella tabella insegnanti c'è una FK che non dovrebbe esserci; avevo fatto copia/incolla e mi è sfuggito.
