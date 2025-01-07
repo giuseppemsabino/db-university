@@ -67,6 +67,11 @@ WHERE `phone` IS NULL;
 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)
 
 ```sql
+INSERT INTO `university`.`students` (`id`, `degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) 
+VALUES ('', '30', 'Giuseppe', 'Mendoza', '2002-05-31', 'DRUATB76D70W116U', '2025-01-07', '621033', 'pepemendoza@test.com');
+
+-- c'è un'errore con l'id iniziale ma dovrebbe essere apposto
+
 ```
 
 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
