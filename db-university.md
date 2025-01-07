@@ -84,5 +84,6 @@ UPDATE `university`.`teachers` SET `office_number` = '126' WHERE (`id` = '58'); 
 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
 
 ```sql
+DELETE FROM `university`.`students` WHERE (`id` = '#'); --sarebbe cosi solo che non ho poputo creare il mio record 
 ```
 
