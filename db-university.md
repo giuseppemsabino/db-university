@@ -59,6 +59,9 @@ FROM university.departments;
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
 ```sql
+SELECT COUNT(id) AS insegnati_senza_tlf
+FROM university.teachers
+WHERE `phone` IS NULL;
 ```
 
 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)
