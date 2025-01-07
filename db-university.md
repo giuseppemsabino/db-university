@@ -77,6 +77,8 @@ VALUES ('', '30', 'Giuseppe', 'Mendoza', '2002-05-31', 'DRUATB76D70W116U', '2025
 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 
 ```sql
+SELECT * FROM university.teachers WHERE `name` LIKE "Pietro"; --creco al professore 
+UPDATE `university`.`teachers` SET `office_number` = '126' WHERE (`id` = '58'); --faccio l'update
 ```
 
 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
