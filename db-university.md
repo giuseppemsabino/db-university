@@ -113,11 +113,33 @@ WHERE `degrees`.`level` = "magistrale" AND `departments`. `name` = "Dipartimento
 ## 3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
 
 ```sql
+SELECT * 
+FROM `courses`
+INNER JOIN `course_teacher`
+ON `courses`.`id` = `course_teacher`.`course_id`
+INNER JOIN `teachers` 
+ON `teachers`.`id` = `course_teacher`.`teacher_id`
+WHERE `teachers`.`id` = '44' ;
 ```
 
 ## 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome
 
 ```sql
+SELECT 
+	`students`.`id` AS `student_id`,
+    `students`.`name` AS `student_name`,
+    `students`.`surname` AS `student_surname`,
+    `students`.`date_of_birth` ,
+    `students`.`email` AS `student_email`,
+    `degrees`.`name` AS `degree_name`,
+    `degrees`.`level` AS `degree_level`,
+    `departments`.`name` AS `department_name`
+FROM `students`
+INNER JOIN `degrees`
+ON `students`.`degree_id` = `degrees`.`id`
+INNER JOIN `departments`
+ON `degrees`. `department_id` = `departments`.`id`
+ORDER BY `students`.`surname` ASC, `students`.`name` ASC;
 ```
 
 ## 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
